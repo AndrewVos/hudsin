@@ -1,0 +1,22 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://hudson-server.com/hudson/api/json
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 08 Jan 2012 19:09:02 GMT
+      server:
+      - Apache
+      content-type:
+      - application/javascript;charset=UTF-8
+      content-length:
+      - '1040'
+    body: ! '{"description":"description","jobs":[{"name":"project1","url":"http://hudson-server.com/hudson/job/project1/","color":"blue"},{"name":"project2","url":"http://hudson-server.com/hudson/job/project2/","color":"blue"},{"name":"project3","url":"http://hudson-server.com/hudson/job/project3/","color":"blue"}],"name":"Projects","url":"http://hudson-server.com/hudson/"}'
+    http_version: '1.1'

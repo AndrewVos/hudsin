@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$:.unshift File.expand_path('../../lib', __FILE__)
+require "hudsin"
+require "hudsin/executes_hudsin"
+require "hudsin/option_parser"
+require "hudsin/hudson_api"
+
+module Hudsin
+  options = Hudsin::OptionParser.new.parse(ARGV)
+  ExecutesHudsin.execute(options, HudsonApi.new(options[:server]), Kernel)
+end
